@@ -28,3 +28,5 @@ Create table AddressBookTable
 Delete From AddressBookTable Where FirstName = 'Manju';
   
 Select * from AddressBookTable Where City = 'Poone' And State = 'Maharashtra';
+
+Select Count(FirstName) From AddressBookTable Where City = 'Bangalore' And State = 'Karnataka';
