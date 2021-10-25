@@ -21,3 +21,8 @@ Create table AddressBookTable
  ('Chetan','T','Indira Nagar','Chennai','TamilNadu','456123','9984561238','Chetan@gmail.com'),
  ('JyotiPrasad','T','Hinjewadi','Poone','Maharashtra','568941','8123292926','Jyotiprasad@gmail.com');
  
+ Update AddressBookTable
+ Set City = 'Tisuram', State = 'Kerala'
+ Where FirstName = 'Nagu';
+
+ Select * from AddressBookTable;
