@@ -47,5 +47,6 @@ Update AddressBookTable
 Set AddressBookName = 'Book3', Type = 'Profession'
 Where City = 'Chennai';
 
-Select * from AddressBookTable;
-    
+Select count(Type) from AddressBookTable where Type = 'Family';
+Select count(Type) from AddressBookTable where Type = 'Friends';
+Select count(Type) from AddressBookTable where Type = 'Profession';
