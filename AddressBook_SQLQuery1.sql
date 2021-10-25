@@ -25,4 +25,6 @@ Create table AddressBookTable
  Set City = 'Tisuram', State = 'Kerala'
  Where FirstName = 'Nagu';
 
- Select * from AddressBookTable;
+Delete From AddressBookTable Where FirstName = 'Manju';
+  
+Select * from AddressBookTable;
