@@ -50,3 +50,10 @@ Where City = 'Chennai';
 Select count(Type) from AddressBookTable where Type = 'Family';
 Select count(Type) from AddressBookTable where Type = 'Friends';
 Select count(Type) from AddressBookTable where Type = 'Profession';
+
+Insert Into AddressBookTable
+Values
+('Raju','Ch','Vijay Nagar','Gadag','Karnataka','582120','9620658742','Raju@gmail.com','Book2','Friends'),
+('Siddu','BH','Vidya Nagar','Hubli','Karnataka','582456','9535666678','Siddu@gmail.com','Book1','Family');
+
+Select * from AddressBookTable;
