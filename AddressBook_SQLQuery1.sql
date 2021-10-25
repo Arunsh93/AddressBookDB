@@ -31,3 +31,21 @@ Select * from AddressBookTable Where City = 'Poone' And State = 'Maharashtra';
 Select Count(FirstName) From AddressBookTable Where City = 'Bangalore' And State = 'Karnataka';
 
 Select * from AddressBookTable Where City = 'Bangalore' Order By FirstName ASC;
+
+Alter Table AddressBookTable
+Add AddressBookName varchar(50),Type varchar(20);
+
+Update AddressBookTable 
+Set AddressBookName = 'Book1', Type = 'Family'
+Where City = 'Bangalore';
+
+Update AddressBookTable 
+Set AddressBookName = 'Book2', Type = 'Friends'
+Where City = 'Poone';
+
+Update AddressBookTable 
+Set AddressBookName = 'Book3', Type = 'Profession'
+Where City = 'Chennai';
+
+Select * from AddressBookTable;
+    
