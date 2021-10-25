@@ -15,11 +15,10 @@ Create table AddressBookTable
 
  Insert Into AddressBookTable
  Values
- ('Arun','Hosur','Rajaji Nagar','Bangalore','Karnataka','582120','9620692457','Arun@gmail.com'),
- ('Nagu','Koppad','Vijay Nagar','Bangalore','Karnataka','580821','9535306678','Nagu@gmail.com'),
- ('Manju','H','Jaya Nagar','Bangalore','Karnataka','582564','956784213','Manju@gmail.com'),
- ('Chetan','T','Indira Nagar','Chennai','TamilNadu','456123','9984561238','Chetan@gmail.com'),
- ('JyotiPrasad','T','Hinjewadi','Poone','Maharashtra','568941','8123292926','Jyotiprasad@gmail.com');
+ ('Muttu','Gotur','Rajaji Nagar','Bangalore','Karnataka','582120','9620692457','Arun@gmail.com'),
+ ('Arpita','Hosur','Vijay Nagar','Bangalore','Karnataka','580821','9535306678','Nagu@gmail.com'),
+ ('Rahul','H','Jaya Nagar','Bangalore','Karnataka','582564','956784213','Manju@gmail.com');
+ 
  
  Update AddressBookTable
  Set City = 'Tisuram', State = 'Kerala'
@@ -30,3 +29,5 @@ Delete From AddressBookTable Where FirstName = 'Manju';
 Select * from AddressBookTable Where City = 'Poone' And State = 'Maharashtra';
 
 Select Count(FirstName) From AddressBookTable Where City = 'Bangalore' And State = 'Karnataka';
+
+Select * from AddressBookTable Where City = 'Bangalore' Order By FirstName ASC;
