@@ -27,4 +27,4 @@ Create table AddressBookTable
 
 Delete From AddressBookTable Where FirstName = 'Manju';
   
-Select * from AddressBookTable;
+Select * from AddressBookTable Where City = 'Poone' And State = 'Maharashtra';
