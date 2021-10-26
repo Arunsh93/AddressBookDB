@@ -57,3 +57,68 @@ Values
 ('Siddu','BH','Vidya Nagar','Hubli','Karnataka','582456','9535666678','Siddu@gmail.com','Book1','Family');
 
 Select * from AddressBookTable;
+
+Create Table Person
+(
+Person_Id int identity(1,1) Primary key Not null,
+FirstName varchar(100) Not null,
+LastName varchar(100) Not null,
+Emailid varchar(50) Not null,
+PhoneNumber varchar(15) Not null
+);
+
+Select * from Person
+Insert Into Person
+Values ('Suresh','Roy','Suresh@gmail.com','1256789425', 456123);
+
+Create Table Address
+(
+Person_Id int Foreign Key References Person(Person_Id),
+Zip int Primary Key,
+City varchar(50),
+State varchar(50)
+);
+
+Insert Into Address
+Values 
+(3,582122, 'Bangalore', 'Karnataka'),
+(2,789456, 'Chennai', 'Tamil Nadu');
+
+Select * from Address;
+
+Create Table AddressBook
+(
+Book_Id int Primary Key,
+Person_Id int Foreign Key References Person(Person_Id),
+BookName varchar(20),
+BookType varchar(20)
+);
+
+Insert into AddressBook
+Values 
+(113, 1, 'FriendsBook','Firends'),
+(112, 2, 'FamilyBook', 'Family'); 
+
+Select * from AddressBook;
+
+Create Table Person_AddressBook
+(
+Person_Id int Foreign Key References Person(Person_Id),
+Book_Id int Foreign Key References AddressBook(Book_Id)
+);
+
+Insert Into Person_AddressBook
+Values (3, 113),
+	   (2, 112);
+
+Select * from Person_AddressBook;
+
+Alter Table Person Add Zip varchar(15);
+
+Select P.FirstName as Name, A.City from Person P Inner Join Address A On A.Person_Id = P.Person_Id Where A.City = 'Chennai';
+
+Select A.City, COUNT(City) as Size From Address A Inner join Person P on A.Person_Id = P.Person_Id Group by City; 
+
+Select P.FirstName as Name, A.City from Person P Inner Join Address A On A.Person_Id = P.Person_Id Where A.City = 'Bangalore' Order By P.FirstName;
+
+Select AB.BookName, Count(BookType) as Size from Person P Inner Join AddressBook AB on P.Person_Id = AB.Person_Id Group By BookName;   
